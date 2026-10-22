@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Better321 — Live Chat</title>
+    <meta name="description" content="Better321: a live chat with custom profiles, DMs, friends, gifts and Plinko." />
+    <link rel="icon" href="public/logo.png" />
+    <style>
+      :root { color-scheme: dark; }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 32px 20px;
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+        color: #f4f4f5;
+        background:
+          radial-gradient(1200px 600px at 10% -10%, rgba(249,115,22,.20), transparent 60%),
+          radial-gradient(900px 500px at 100% 0%, rgba(251,191,36,.12), transparent 60%),
+          #0d0906;
+      }
+      main { width: 100%; max-width: 760px; }
+      .brand { display: flex; align-items: center; gap: 16px; }
+      .brand img { width: 84px; height: 84px; object-fit: contain; filter: drop-shadow(0 10px 30px rgba(249,115,22,.45)); }
+      .brand h1 { margin: 0; font-size: 44px; font-weight: 900; letter-spacing: -.02em; }
+      .brand h1 span { color: #fb923c; }
+      p.lead { color: #a1a1aa; font-size: 18px; line-height: 1.6; }
+      .card {
+        margin-top: 24px; padding: 22px 24px; border-radius: 20px;
+        background: rgba(255,237,213,.035); border: 1px solid rgba(255,186,120,.12);
+      }
+      .card h2 { margin: 0 0 10px; font-size: 18px; }
+      ol, ul { margin: 0; padding-left: 22px; line-height: 1.8; color: #d4d4d8; }
+      code { background: rgba(255,255,255,.07); padding: 2px 6px; border-radius: 6px; font-size: .92em; }
+      .warn { border-color: rgba(251,191,36,.35); background: rgba(251,191,36,.07); }
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 18px; }
+      .grid div { padding: 12px 14px; border-radius: 14px; background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.06); font-size: 14px; color: #d4d4d8; }
+      a { color: #fdba74; }
+      footer { margin-top: 28px; font-size: 13px; color: #71717a; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="brand">
+        <img src="public/logo.png" alt="Better321 logo" />
+        <h1>Better<span>321</span></h1>
+      </div>
+      <p class="lead">
+        A live chat room with custom profiles: profile pictures, banners and music, inclusive profile tags,
+        DMs, friends &amp; a photo/video wall, gifts, coins and Plinko, plus owner &amp; moderator tools.
+      </p>
+
+      <div class="grid">
+        <div>💬 Live chat with mentions &amp; media</div>
+        <div>🎨 Gradient names &amp; message colours</div>
+        <div>👥 Friends, DMs &amp; wall posts</div>
+        <div>🎁 Gifts, coins &amp; 🎰 Plinko</div>
+        <div>🛡️ Owner &amp; moderator tools</div>
+        <div>👋 Guest access</div>
+      </div>
+
+      <div class="card">
+        <h2>🚀 Deploy it on Vercel</h2>
+        <ol>
+          <li>Put this folder in a GitHub repository.</li>
+          <li>On <a href="https://vercel.com/new">vercel.com/new</a>, import the repository (it's detected as <b>Next.js</b>).</li>
+          <li>In the project, open <b>Storage → Create Database → Neon</b> and connect it. This adds <code>DATABASE_URL</code>.</li>
+          <li>Redeploy. Tables are created automatically on every deploy.</li>
+          <li>Sign up with the username <code>atomic8800</code> to become the owner.</li>
+        </ol>
+        <p style="margin:12px 0 0;color:#a1a1aa">Full instructions are in <code>README.md</code>.</p>
+      </div>
+
+      <div class="card warn">
+        <h2>⚠️ Seeing this page on your live website?</h2>
+        <ul>
+          <li>This file is only the repository's front page. The real app is built by Next.js from <code>src/app</code>.</li>
+          <li>In Vercel, go to <b>Project Settings → Build and Deployment</b> and make sure <b>Framework Preset</b> is
+            <b>Next.js</b> and <b>Root Directory</b> is the folder that contains <code>package.json</code>, then redeploy.</li>
+        </ul>
+      </div>
+
+      <footer>Better321 · Next.js · PostgreSQL · Drizzle ORM</footer>
+    </main>
+  </body>
+</html>
